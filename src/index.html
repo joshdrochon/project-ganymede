@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Ganymede</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <form id="user-form">
+        <label for="input-name">What's your name?</label>
+        <input id="input-name"></input>
+        <label for="input-birthday">How old are you?</label>
+        <input id="input-birthday" type="date">
+        <button class="btn btn-success" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="initially-hidden">
+      <h2>Hello, <span id="user-name"></span>This is your age on...</h2>
+      <ul>
+        <li>Mercury: <span id="age-mercury"></span></li>
+        <li>Venus: <span id="age-venus"></span></li>
+        <li>Mars: <span id="age-mars"></span></li>
+        <li>Jupiter: <span id="age-jupiter"></span></li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+
+
+
+<!-- Studying Music for Concentration, Music for Stress Relief, Brain Power, Meditation Music, ☯3237
+
+*After clone a project down from github, run npm install to install all necessary dependencies
+and $ npm run build to create a dist folder with a bundle.js file
+
+
+All dependencies will be included in the devDependencies in the package.json file
+
+Two methods of installing dependencies are first typing the name of the dependency in the package.json file then running $ npm install, or installing directly in the terminal by specifying the dependency
+
+To remove dependencies you simply remove its reference from the package.json file and then run  $ npm prune
+
+To install the npm package for jQuery run $npm install jquery —save
+
+When committing each file with git
+
+1. $ git status
+2. $ git diff to verify
+3. $ git add (specific filename)
+4. $ git commit
