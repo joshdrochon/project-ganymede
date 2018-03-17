@@ -18,9 +18,13 @@ describe('User', function()
   it('should return user object age in Mercury years', function()
   {
     const newUser = new User("name", "1989,02,14");
-    let ageEarth = newUser.getAge();
-    let ageMercury = newUser.getMercury(ageEarth);
-    expect(ageMercury).toEqual(7);
+    expect(newUser.getMercury()).toEqual(7);
+  });
+
+  it('should return user object age in Venus years', function()
+  {
+    const newUser = new User("name", "1989,02,14");
+    expect(newUser.getVenus()).toEqual(18);
   });
 
 
