@@ -1,4 +1,4 @@
-import { User } from './ganymede.js';
+import { User } from './user.js';
 import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
@@ -13,9 +13,16 @@ $(document).ready(function(){
     let newDate = new Date().getTime()/1000;
 
     let newUser = new User(userName, userBirthday);
-    let userAgeSeconds = newDate - newUser.age;
-    let userAgeYears = userAgeSeconds / 31536000;
-    // userAgeSeconds/60/60/24/365
+    let ageMercury = newUser.getAge().getMurcury();
+    let ageVenus = newUser.getAge().getVenus();
+    let ageMars = newUser.getAge().getMars();
+    let ageJupiter = newUser.getAge().getJupiter();
 
+    $("#age-mercury").append(ageMercury);
+    $("#age-venus").append(ageVenus);
+    $("#age-mars").append(ageMars);
+    $("#age-jupiter").append(ageJupiter);
+
+    $("#initially-hidde").show();
   });
 });

@@ -7,32 +7,33 @@ export class User
     this.age = new Date(birthday).getTime()/1000;
   }
 
-  getAgeInSeconds()
+  getAge()
   {
+    let yrs = 31536000; //userAgeSeconds/60/60/24/365
     let date = new Date().getTime()/1000;
-    let ageSeconds = date - this.age;
+    let age = Math.round((date - this.age)/yrs);
 
-    return ageSeconds;
+    return age;
   }
 
   getMercury()
   {
-    return this.date * .24;
+    return this.age * .24;
   }
 
   getVenus()
   {
-    return this.date * .62;
+    return this.age * .62;
   }
 
   getMars()
   {
-    return this.date * 1.88;
+    return this.age * 1.88;
   }
 
   getJupiter()
   {
-    return this.date * 11.86;
+    return this.age * 11.86;
   }
 
   getYearsLeft()
@@ -42,10 +43,3 @@ export class User
 
 
 }// end class
-
-//first spec will be to calcalute everything in earth time
-
-//program should convert usee's age into seconds
-//program should be able to convert the user's age with the current date in seconds
-//program should be able to take user's age and calculate how many years old they are in 4 planets
-//program should tell a user how many years they have left to live on each planet

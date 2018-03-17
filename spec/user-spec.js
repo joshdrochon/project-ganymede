@@ -9,11 +9,11 @@ describe('User', function()
     expect(newUser.birthday).toEqual("03/14/2016");
   });
 
-  // it('should return user object age in seconds' function()
-  // {
-  //   const newUser = new User("name", "2000,01,30");
-  //   expect(newUser.age).toEqual(22);
-  // });
+  it('should return user object age in years', function()
+  {
+    const newUser = new User("name", "1989,02,14");
+    expect(newUser.getAge()).toEqual(29);
+  });
 
 
 });
