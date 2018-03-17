@@ -33,5 +33,12 @@ describe('User', function()
     expect(newUser.getMars()).toEqual(15);
   });
 
+  it('should return user object age in Jupiter years', function()
+  {
+    const newUser = new User("name", "1989,02,14");
+    expect(newUser.getJupiter()).toEqual(2.4);
+  });
+
+
 
 });
