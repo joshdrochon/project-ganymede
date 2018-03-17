@@ -18,22 +18,22 @@ export class User
 
   getMercury()
   {
-    return this.age * .24;
+    return Math.round(this.getAge() * .24);
   }
 
   getVenus()
   {
-    return this.age * .62;
+    return Math.round(this.age * .62);
   }
 
   getMars()
   {
-    return this.age * 1.88;
+    return Math.round(this.age * 1.88);
   }
 
   getJupiter()
   {
-    return this.age * 11.86;
+    return Math.round(this.age * 11.86);
   }
 
   getYearsLeft()

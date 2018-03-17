@@ -9,10 +9,18 @@ describe('User', function()
     expect(newUser.birthday).toEqual("03/14/2016");
   });
 
-  it('should return user object age in years', function()
+  it('should return user object age in Earth years', function()
   {
     const newUser = new User("name", "1989,02,14");
     expect(newUser.getAge()).toEqual(29);
+  });
+
+  it('should return user object age in Mercury years', function()
+  {
+    const newUser = new User("name", "1989,02,14");
+    let ageEarth = newUser.getAge();
+    let ageMercury = newUser.getMercury(ageEarth);
+    expect(ageMercury).toEqual(7);
   });
 
 
