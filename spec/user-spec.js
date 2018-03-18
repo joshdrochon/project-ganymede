@@ -44,8 +44,14 @@ describe('User', function()
 
   it('should return user object life expectancy', function()
   {
-    const newUser = new User("Josh", "03/14/2016", "male", "white", "false");
+    const newUser = new User("Josh", "03/14/2016", "male", "white", false);
     expect(newUser.getExpectancy()).toEqual(78.9);
+  });
+
+  it('should return user object expected years left to live', function()
+  {
+    const newUser = new User("Jill", "1989,02,14", "female", "white", true);
+    expect(newUser.getYearsLeft()).toEqual(51.9);
   });
 
 });

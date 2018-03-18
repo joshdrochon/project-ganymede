@@ -1,9 +1,12 @@
 export class User
 {
-  constructor(name, birthday)
+  constructor(name, birthday, gender, ethnicity, isSmoker)
   {
     this.name = name;
     this.birthday = birthday;
+    this.gender = gender;
+    this.ethnicity = ethnicity;
+    this.isSmoker = isSmoker;
     this.age = new Date(birthday).getTime()/1000;
   }
 
@@ -18,28 +21,49 @@ export class User
 
   getMercury()
   {
-    return Math.round(this.getAge() * .24);
+    return Math.round(this.getAge() / .24);
   }
 
   getVenus()
   {
-    return Math.round(this.age * .62);
+    return Math.round(this.getAge() / .62);
   }
 
   getMars()
   {
-    return Math.round(this.age * 1.88);
+    return Math.round(this.getAge() / 1.88);
   }
 
   getJupiter()
   {
-    return Math.round(this.age * 11.86);
+    return Number.parseFloat((this.getAge() / 11.86).toFixed(1));
+  }
+
+  getExpectancy()
+  {
+    let ethnicity = this.ethnicity;
+
+    let expectancy = ethnicity == "asian" ? expectancy = 86.5 :
+    ethnicity == "black" ? expectancy = 74.1 :
+    ethnicity == "hispanic" ? expectancy = 82.6 :
+    expectancy = 78.9; //if white
+
+    return expectancy;
   }
 
   getYearsLeft()
   {
-    //code goes here
+    let expectancy = this.getExpectancy();
+
+    if(this.gender === "female")
+    {
+      expectancy += 5;
+    }
+    expectancy = this.isSmoker ? expectancy -= 3 : expectancy
+
+    return Number.parseFloat((expectancy - this.getAge()).toFixed(1));
   }
 
+}
 
-}// end class
+//nested keys can't be referenced

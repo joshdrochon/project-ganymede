@@ -5,17 +5,41 @@
   </head>
   <body>
     <div class="jumbotron">
+      <h2>Galactic Life Expectancy</h2>
+      <p><strong>[Fill out the form to determine your age and remaining life expectancy throughout the solar system.]</strong></p>
       <form id="user-form">
-        <label for="input-name">What's your name?</label>
+
+        <label for="input-name">Name <em>(optional)</em></label>
         <input id="input-name"></input>
-        <label for="input-birthday">How old are you?</label>
+
+        <label for="input-birthday">Date of birth</label>
         <input id="input-birthday" type="date">
+
+        <label for="input-gender">Gender</label>
+        <select id="input-gender">
+          <option value="1">Female</option>
+          <option value="0">Male</option>
+        </select>
+
+        <label for="input-race">Race/Ethnicity</label>
+        <select id="input-race">
+          <option value="asian">Asian</option>
+          <option value="black">Black</option>
+          <option value="hispanic">Hispanic</option>
+          <option value="white">White</option>
+        </select>
+
+        <label for="input-smoke"></label>
+        <select id="input-smoke">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
         <button class="btn btn-success" type="submit">Submit</button>
       </form>
     </div>
 
     <div id="initially-hidden">
-      <h2>Hello, <span id="user-name"></span>This is your age on...</h2>
+      <h2>Hello, <span id="user-name"></span>. This is how old you are on the following planets:</h2>
       <ul>
         <li>Mercury: <span id="age-mercury"></span></li>
         <li>Venus: <span id="age-venus"></span></li>
@@ -25,27 +49,3 @@
     </div>
   </body>
 </html>
-
-
-
-
-<!-- Studying Music for Concentration, Music for Stress Relief, Brain Power, Meditation Music, ☯3237
-
-*After clone a project down from github, run npm install to install all necessary dependencies
-and $ npm run build to create a dist folder with a bundle.js file
-
-
-All dependencies will be included in the devDependencies in the package.json file
-
-Two methods of installing dependencies are first typing the name of the dependency in the package.json file then running $ npm install, or installing directly in the terminal by specifying the dependency
-
-To remove dependencies you simply remove its reference from the package.json file and then run  $ npm prune
-
-To install the npm package for jQuery run $npm install jquery —save
-
-When committing each file with git
-
-1. $ git status
-2. $ git diff to verify
-3. $ git add (specific filename)
-4. $ git commit

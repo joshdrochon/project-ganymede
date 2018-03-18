@@ -10,19 +10,18 @@ $(document).ready(function(){
     let userName = $("#input-name").val();
     let userBirthday = $("#input-birthday").val();
 
-    let newDate = new Date().getTime()/1000;
-
     let newUser = new User(userName, userBirthday);
-    let ageMercury = newUser.getAge().getMurcury();
-    let ageVenus = newUser.getAge().getVenus();
-    let ageMars = newUser.getAge().getMars();
-    let ageJupiter = newUser.getAge().getJupiter();
+    let ageMercury = newUser.getMercury();
+    let ageVenus = newUser.getVenus();
+    let ageMars = newUser.getMars();
+    let ageJupiter = newUser.getJupiter();
 
-    $("#age-mercury").append(ageMercury);
-    $("#age-venus").append(ageVenus);
-    $("#age-mars").append(ageMars);
-    $("#age-jupiter").append(ageJupiter);
+    $("#user-name").text(userName);
+    $("#age-mercury").text(ageMercury);
+    $("#age-venus").text(ageVenus);
+    $("#age-mars").text(ageMars);
+    $("#age-jupiter").text(ageJupiter);
 
-    $("#initially-hidde").show();
+    $("#initially-hidden").show();
   });
 });
