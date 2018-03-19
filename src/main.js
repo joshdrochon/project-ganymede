@@ -1,8 +1,7 @@
-import { User } from './user.js';
-import './styles.css';
 import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import './styles.css';
+import { User } from './user.js';
 
 $(document).ready(function(){
   $("#user-form").submit(function(event){

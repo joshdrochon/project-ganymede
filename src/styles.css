@@ -9,3 +9,13 @@ body{
 #initially-hidden{
   display: none;
 }
+.container{
+  background-color: lightgreen;
+  border: 3px groove lightgray;
+  padding: 10px;
+  font-family: arial;
+}
+
+.jumbotron p{
+  margin-top:50px;
+}

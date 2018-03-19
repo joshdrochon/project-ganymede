@@ -2,18 +2,8 @@
 <html>
   <head>
     <title>Project Ganymede</title>
-    <style>
-      .container{
-        background-color: lightgreen;
-        border: 3px groove lightgray;
-        padding: 10px;
-        font-family: arial;
-      }
-
-      .jumbotron p{
-        margin-top:50px;
-      }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/src/styles.css">
   </head>
   <body>
     <div class="jumbotron">
@@ -46,7 +36,7 @@
       <p><sup>*</sup>required field</p>
     </div>
 
-    <div class="container" id="initially-hidden">
+    <div class="container" hidden id="initially-hidden">
       <h5>Hello, <span id="user-name"></span>. This is how old you are on the following planets:</h5>
       <ul>
         <li>Mercury: <span id="age-mercury"></span></li>
