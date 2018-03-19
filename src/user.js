@@ -55,11 +55,11 @@ export class User
   {
     let expectancy = this.getExpectancy();
 
-    if(this.gender === "female")
+    if(this.gender == "female")
     {
       expectancy += 5;
     }
-    expectancy = this.isSmoker ? expectancy -= 3 : expectancy
+    expectancy = this.isSmoker == "true" ? expectancy -= 3 : expectancy
 
     return Number.parseFloat((expectancy - this.getAge()).toFixed(1));
   }

@@ -9,19 +9,35 @@ $(document).ready(function(){
     event.preventDefault();
     let userName = $("#input-name").val();
     let userBirthday = $("#input-birthday").val();
+    let userGender = $("#input-gender").val();
+    let userRace = $("#input-race").val();
+    let userSmoke = $("#input-smoke").val();
 
-    let newUser = new User(userName, userBirthday);
+    let newUser = new User(userName, userBirthday, userGender, userRace, userSmoke);
+
     let ageMercury = newUser.getMercury();
     let ageVenus = newUser.getVenus();
     let ageMars = newUser.getMars();
     let ageJupiter = newUser.getJupiter();
 
-    $("#user-name").text(userName);
-    $("#age-mercury").text(ageMercury);
-    $("#age-venus").text(ageVenus);
-    $("#age-mars").text(ageMars);
-    $("#age-jupiter").text(ageJupiter);
+    let yrsLeftMercury = (newUser.getYearsLeft()/.24).toFixed(1);
+    let yrsLeftVenus = (newUser.getYearsLeft()/.62).toFixed(1);
+    let yrsLeftMars = (newUser.getYearsLeft()/1.88).toFixed(1);
+    let yrsLeftJupiter = (newUser.getYearsLeft()/11.86).toFixed(1);
 
-    $("#initially-hidden").show();
+    let agePlanets = [ageMercury, ageVenus, ageMars, ageJupiter];
+    let yrsLeftPlanets = [yrsLeftMercury, yrsLeftVenus, yrsLeftMars, yrsLeftJupiter];
+    let ageSpans = ["age-mercury", "age-venus", "age-mars", "age-jupiter"];
+    let yrsLeftSpans = ["yrsleft-mercury", "yrsleft-venus", "yrsleft-mars", "yrsleft-jupiter"];
+
+    $("#user-name").text(userName);
+
+    for(let i=0; i<4; i++)
+    {
+      $("#" + ageSpans[i]).text(agePlanets[i]);
+      $("#" + yrsLeftSpans[i]).text(yrsLeftPlanets[i]);
+    }
+
+    $("#initially-hidden").toggle();
   });
 });

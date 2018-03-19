@@ -2,49 +2,64 @@
 <html>
   <head>
     <title>Project Ganymede</title>
+    <style>
+      .container{
+        background-color: lightgreen;
+        border: 3px groove lightgray;
+        padding: 10px;
+        font-family: arial;
+      }
+
+      .jumbotron p{
+        margin-top:50px;
+      }
+    </style>
   </head>
   <body>
     <div class="jumbotron">
       <h2>Galactic Life Expectancy</h2>
-      <p><strong>[Fill out the form to determine your age and remaining life expectancy throughout the solar system.]</strong></p>
+      <h6><strong>[Fill out the form to determine your age and remaining life expectancy throughout the solar system]</strong></h6>
       <form id="user-form">
-
-        <label for="input-name">Name <em>(optional)</em></label>
-        <input id="input-name"></input>
-
-        <label for="input-birthday">Date of birth</label>
+        <label for="input-name">Name<sup>*</sup></label>
+        <input id="input-name" required></input>
+        <label for="input-birthday" required>Date of birth<sup>*</sup></label>
         <input id="input-birthday" type="date">
-
-        <label for="input-gender">Gender</label>
-        <select id="input-gender">
-          <option value="1">Female</option>
-          <option value="0">Male</option>
+        <label for="input-gender">Gender<sup>*</sup></label>
+        <select id="input-gender" required>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
         </select>
-
-        <label for="input-race">Race/Ethnicity</label>
-        <select id="input-race">
+        <label for="input-race">Race/Ethnicity<sup>*</sup></label>
+        <select id="input-race" required>
           <option value="asian">Asian</option>
           <option value="black">Black</option>
           <option value="hispanic">Hispanic</option>
           <option value="white">White</option>
         </select>
-
-        <label for="input-smoke"></label>
-        <select id="input-smoke">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
+        <label for="input-smoke">Do you smoke?<sup>*</sup></label>
+        <select id="input-smoke" required>
+          <option value="false">No</option>
+          <option value="true">Yes</option>
         </select>
         <button class="btn btn-success" type="submit">Submit</button>
       </form>
+      <p><sup>*</sup>required field</p>
     </div>
 
-    <div id="initially-hidden">
-      <h2>Hello, <span id="user-name"></span>. This is how old you are on the following planets:</h2>
+    <div class="container" id="initially-hidden">
+      <h5>Hello, <span id="user-name"></span>. This is how old you are on the following planets:</h5>
       <ul>
         <li>Mercury: <span id="age-mercury"></span></li>
         <li>Venus: <span id="age-venus"></span></li>
         <li>Mars: <span id="age-mars"></span></li>
         <li>Jupiter: <span id="age-jupiter"></span></li>
+      </ul>
+      <h6>and this is how many years you have left to live on each planet:</h6>
+      <ul>
+        <li>Mercury: <span id="yrsleft-mercury"></span></li>
+        <li>Venus: <span id="yrsleft-venus"></span></li>
+        <li>Mars: <span id="yrsleft-mars"></span></li>
+        <li>Jupiter: <span id="yrsleft-jupiter"></span></li>
       </ul>
     </div>
   </body>
