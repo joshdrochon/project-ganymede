@@ -1,6 +1,6 @@
 import $ from 'jquery';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
 import { User } from './user.js';
 
 $(document).ready(function(){
@@ -37,6 +37,6 @@ $(document).ready(function(){
       $("#" + yrsLeftSpans[i]).text(yrsLeftPlanets[i]);
     }
 
-    $("#initially-hidden").toggle();
+    $("#initially-hidden").fadeToggle();
   });
 });
