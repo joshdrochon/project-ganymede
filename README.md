@@ -1,6 +1,6 @@
-# _Hair Salon Application_
+# _Project Ganymede_
 
-#### _Web App for Hair Salon 03/18/18_
+#### _Web App for Galactic Age Calculator 03/18/18_
 
 #### By _**Josh Rochon**_
 
@@ -9,7 +9,7 @@
 User Stories:
 
 Expected Behaviors:
-  User can enter name, dob, gender, race, and whether tehy smoke
+  User can enter name, dob, gender, race, and whether they smoke
 	User will be able to see how old they are on Mercury, Venus, Mars, and Jupiter
   User will be able to see how many years they have left to live on said planets.
   User will be able resubmit the form as many times as desired
